@@ -3,9 +3,12 @@
   <head>
     <title>Coral Shopping</title>
     <meta property="og:title" content="Coral Shopping" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
     <meta property="twitter:card" content="summary_large_image" />
+    
+    <link rel="icon" href="">
+    <link rel="apple-touch-icon" href="">
 
     <style data-tag="reset-style-sheet">
       html {  
@@ -71,6 +74,11 @@
         fill: var(--dl-color-theme-neutral-dark);
       }
     </style>
+    <link href="./dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="./dist/css/fontawesome-all.min.css" rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://unpkg.com/animate.css@4.1.1/animate.css"/>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap" data-tag="font"/>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=STIX+Two+Text:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&amp;display=swap" data-tag="font"/>
@@ -78,7 +86,7 @@
     <link rel="stylesheet" href="https://unpkg.com/@teleporthq/teleport-custom-scripts/dist/style.css"/>
   </head>
   <body>
-    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./dist/css/style.css" />
     <!--navigation bar-->
     <aside class="vertical-sidebar"> 
       <input type="checkbox" role="switch" id="checkbox-input" class="checkbox-input" />
@@ -112,7 +120,7 @@
                   <h2 class="sidebar__item--heading">general</h2>
               </li>
               <li class="sidebar__item"> 
-                <a class="sidebar__link" href="#home" data-tooltip="Home"> 
+                <a class="sidebar__link" href="#hero" data-tooltip="Home"> 
                   <span class="icon"> 
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-house" viewBox="0 0 16 16">
                       <path d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5z"/>
@@ -122,7 +130,7 @@
                 </a> 
               </li>
               <li class="sidebar__item"> 
-                <a class="sidebar__link" href="#" data-tooltip="About"> 
+                <a class="sidebar__link" href="#about" data-tooltip="About"> 
                   <span class="icon"> 
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-file-earmark-person" viewBox="0 0 16 16">
                       <path d="M11 8a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
@@ -133,7 +141,7 @@
                 </a> 
               </li>
               <li class="sidebar__item"> 
-                <a class="sidebar__link" href="#" data-tooltip="Services"> 
+                <a class="sidebar__link" href="#services" data-tooltip="Services"> 
                   <span class="icon"> 
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-hdd-stack" viewBox="0 0 16 16">
                       <path d="M14 10a1 1 0 0 1 1 1v1a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1v-1a1 1 0 0 1 1-1zM2 9a2 2 0 0 0-2 2v1a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-1a2 2 0 0 0-2-2z"/>
@@ -145,7 +153,7 @@
                 </a> 
               </li>
               <li class="sidebar__item"> 
-                <a class="sidebar__link" href="#" data-tooltip="Testimonial"> 
+                <a class="sidebar__link" href="#testimonial" data-tooltip="Testimonial"> 
                   <span class="icon"> 
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chat-square-text" viewBox="0 0 16 16">
                       <path d="M14 1a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1h-2.5a2 2 0 0 0-1.6.8L8 14.333 6.1 11.8a2 2 0 0 0-1.6-.8H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2.5a1 1 0 0 1 .8.4l1.9 2.533a1 1 0 0 0 1.6 0l1.9-2.533a1 1 0 0 1 .8-.4H14a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"/>
@@ -156,7 +164,7 @@
                 </a> 
               </li>
               <li class="sidebar__item"> 
-                <a class="sidebar__link" href="#" data-tooltip="Contact"> 
+                <a class="sidebar__link" href="#contact" data-tooltip="Contact"> 
                   <span class="icon"> 
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-lines-fill" viewBox="0 0 16 16">
                       <path d="M6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m-5 6s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zM11 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5m.5 2.5a.5.5 0 0 0 0 1h4a.5.5 0 0 0 0-1zm2 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1zm0 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1z"/>
@@ -228,226 +236,227 @@
 
     <!--main content-->
     <div class="main-content">
-      <link href="./index.css" rel="stylesheet" />
+      <link href="./dist/css/index.css" rel="stylesheet" />
+      
+      <!--Hero Section-->
+      <div class="row" id="hero"> 
+        <div class="col-lg-12 col-md-10"> 
+          <hero17-wrapper class="hero17-wrapper" id="home">
+            <!--Hero17 component-->
+            <div class="hero17-header78">
+              <div class="hero17-column thq-section-padding thq-section-max-width">
+                <div class="hero17-content1">
+                  <h1 class="hero17-text1 thq-heading-1">
+                    <fragment class="home-fragment116">
+                      <span class="home-text220">Coral </span>
+                      <span class="home-text221">Shopping</span>
+                    </fragment>
+                  <h1 class="hero17-text1 thq-heading-1">
+                    <fragment class="home-fragment116">
+                      <span class="home-text116">
+                        Shop the Best of Nigerian Groceries Online
+                      </span>
+                    </fragment>
+                  </h1>
+                  <p class="hero17-text2 thq-body-large">
+                    <fragment class="home-fragment117">
+                      <span class="home-text117">
+                        Discover a wide selection of high-quality Nigerian grocery
+                        and household items sourced locally for your convenience.
+                        Experience the authentic flavors and ingredients that make
+                        Nigerian cuisine unique.
+                      </span>
+                    </fragment>
+                  </p>
+                </div>
+                <div class="hero17-actions">
+                    <button class="thq-button-filled hero17-button1">
+                      <span class="thq-body-small">
+                        <fragment class="home-fragment115">
+                          <span class="home-text115">Shop Now</span>
+                        </fragment>
+                      </span>
+                    </button>
+                  <button class="thq-button-outline hero17-button2">
+                    <span class="thq-body-small">
+                      <fragment class="home-fragment114">
+                        <span class="home-text114">Learn More</span>
+                      </fragment>
+                    </span>
+                  </button>
+                </div>
+              </div>
+              <div class="hero17-content2">
+                <div class="hero17-row-container1 thq-animated-group-container-horizontal thq-mask-image-horizontal">
+                  <div class="thq-animated-group-horizontal">
+                    <img
+                      alt="Fresh and Local Nigerian Grocery Items"
+                      src="img/food1.jpg"
+                      class="hero17-placeholder-image10 thq-img-scale thq-img-ratio-1-1"
+                    />
+                    <img
+                      alt="Example value for image2Alt"
+                      src="img/food2.jpg"
+                      class="hero17-placeholder-image11 thq-img-scale thq-img-ratio-1-1"
+                    />
+                    <img
+                      alt="Example value for image3Alt"
+                      src="img/food3.jpg"
+                      class="hero17-placeholder-image12 thq-img-scale thq-img-ratio-1-1"
+                    />
+                    <img
+                      alt="Example value for image4Alt"
+                      src="img/food4.jpg"
+                      class="hero17-placeholder-image13 thq-img-scale thq-img-ratio-1-1"
+                    />
+                    <img
+                      alt="Example value for image5Alt"
+                      src="img/food5.jpg"
+                      class="hero17-placeholder-image14 thq-img-scale thq-img-ratio-1-1"
+                    />
+                    <img
+                      alt="Example value for image6Alt"
+                      src="img/food6.jpg"
+                      class="hero17-placeholder-image15 thq-img-scale thq-img-ratio-1-1"
+                    />
+                  </div>
+                  <div class="thq-animated-group-horizontal">
+                    <img
+                      alt="Fresh and Local Nigerian Grocery Items"
+                      src="img/food7.jpg"
+                      class="hero17-placeholder-image16 thq-img-scale thq-img-ratio-1-1"
+                    />
+                    <img
+                      alt="Example value for image2Alt"
+                      src="img/food8.jpg"
+                      class="hero17-placeholder-image17 thq-img-scale thq-img-ratio-1-1"
+                    />
+                    <img
+                      alt="Example value for image3Alt"
+                      src="img/food9.jpg"
+                      class="hero17-placeholder-image18 thq-img-scale thq-img-ratio-1-1"
+                    />
+                    <img
+                      alt="Example value for image4Alt"
+                      src="img/food10.jpg"
+                      class="hero17-placeholder-image19 thq-img-scale thq-img-ratio-1-1"
+                    />
+                    <img
+                      alt="Example value for image5Alt"
+                      src="img/food11.jpg"
+                      class="hero17-placeholder-image20 thq-img-scale thq-img-ratio-1-1"
+                    />
+                    <img
+                      alt="Hero Image"
+                      src="img/food12.jpg"
+                      class="hero17-placeholder-image21 thq-img-scale thq-img-ratio-1-1"
+                    />
+                  </div>
+                </div>
+                <div
+                  class="hero17-row-container2 thq-animated-group-container-horizontal thq-mask-image-horizontal"
+                >
+                  <div class="thq-animated-group-horizontal-reverse">
+                    <img
+                      alt="Example value for image7Alt"
+                      src="img/gift1.jpg"
+                      class="hero17-placeholder-image22 thq-img-scale thq-img-ratio-1-1"
+                    />
+                    <img
+                      alt="Example value for image8Alt"
+                      src="img/gift2.jpg"
+                      class="hero17-placeholder-image23 thq-img-scale thq-img-ratio-1-1"
+                    />
+                    <img
+                      alt="Example value for image9Alt"
+                      src="img/gift3.jpg"
+                      class="hero17-placeholder-image24 thq-img-scale thq-img-ratio-1-1"
+                    />
+                    <img
+                      alt="Example value for image10Alt"
+                      src="img/gift4.jpg"
+                      class="hero17-placeholder-image25 thq-img-scale thq-img-ratio-1-1"
+                    />
+                    <img
+                      alt="Example value for image11Alt"
+                      src="img/gift5.jpg"
+                      class="hero17-placeholder-image26 thq-img-scale thq-img-ratio-1-1"
+                    />
+                    <img
+                      alt="Example value for image12Alt"
+                      src="img/gift6.jpg"
+                      class="hero17-placeholder-image27 thq-img-scale thq-img-ratio-1-1"
+                    />
+                  </div>
+                  <div class="thq-animated-group-horizontal-reverse">
+                    <img
+                      alt="Example value for image7Alt"
+                      src="img/gift7.jpg"
+                      class="hero17-placeholder-image28 thq-img-scale thq-img-ratio-1-1"
+                    />
+                    <img
+                      alt="Example value for image8Alt"
+                      src="img/gift8.jpg"
+                      class="hero17-placeholder-image29 thq-img-scale thq-img-ratio-1-1"
+                    />
+                    <img
+                      alt="Example value for image9Alt"
+                      src="img/gift9.jpg"
+                      class="hero17-placeholder-image30 thq-img-scale thq-img-ratio-1-1"
+                    />
+                    <img
+                      alt="Example value for image10Alt"
+                      src="img/gift10.jpg"
+                      class="hero17-placeholder-image31 thq-img-scale thq-img-ratio-1-1"
+                    />
+                    <img
+                      alt="Example value for image11Alt"
+                      src="img/gift11.jpg"
+                      class="hero17-placeholder-image32 thq-img-scale thq-img-ratio-1-1"
+                    />
+                    <img
+                      alt="Hero Image"
+                      src="https://images.unsplash.com/photo-1568214379698-8aeb8c6c6ac8?ixid=M3w5MTMyMXwwfDF8c2VhcmNofDEyfHxncmFmaWN8ZW58MHx8fHwxNzE1Nzk0OTk5fDA&amp;ixlib=rb-4.0.3&amp;w=1500"
+                      class="hero17-placeholder-image33 thq-img-scale thq-img-ratio-1-1"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div>
+                <div class="hero17-container2">
+                  <style>
+                    @keyframes scroll-x {
+                      from {
+                        transform: translateX(0);
+                      }
+                      to {
+                        transform: translateX(calc(-100% - 16px));
+                      }
+                    }
+
+                    @keyframes scroll-y {
+                      from {
+                        transform: translateY(0);
+                      }
+                      to {
+                        transform: translateY(calc(-100% - 16px));
+                      }
+                    }
+                  </style>
+                </div>
+              </div>
+            </div>
+          </hero17-wrapper>
+        </div>
+      </div>  
+      <!--Hero section ends-->
 
       <div class="container home-container">
         <div class="row">
           <div class="col-lg-12 col-md-12">
-            <!--Hero Section-->
-            <div class="row"> 
-              <div class="col-lg-12 col-md-10 offset-md-1"> 
-                <hero17-wrapper class="hero17-wrapper" id="home">
-                  <!--Hero17 component-->
-                  <div class="hero17-header78">
-                    <div class="hero17-column thq-section-padding thq-section-max-width">
-                      <div class="hero17-content1">
-                        <h1 class="hero17-text1 thq-heading-1">
-                          <fragment class="home-fragment116">
-                            <span class="home-text220">Coral </span>
-                            <span class="home-text221">Shopping</span>
-                          </fragment>
-                        <h1 class="hero17-text1 thq-heading-1">
-                          <fragment class="home-fragment116">
-                            <span class="home-text116">
-                              Shop the Best of Nigerian Groceries Online
-                            </span>
-                          </fragment>
-                        </h1>
-                        <p class="hero17-text2 thq-body-large">
-                          <fragment class="home-fragment117">
-                            <span class="home-text117">
-                              Discover a wide selection of high-quality Nigerian grocery
-                              and household items sourced locally for your convenience.
-                              Experience the authentic flavors and ingredients that make
-                              Nigerian cuisine unique.
-                            </span>
-                          </fragment>
-                        </p>
-                      </div>
-                      <div class="hero17-actions">
-                          <button class="thq-button-filled hero17-button1">
-                            <span class="thq-body-small">
-                              <fragment class="home-fragment115">
-                                <span class="home-text115">Shop Now</span>
-                              </fragment>
-                            </span>
-                          </button>
-                        <button class="thq-button-outline hero17-button2">
-                          <span class="thq-body-small">
-                            <fragment class="home-fragment114">
-                              <span class="home-text114">Learn More</span>
-                            </fragment>
-                          </span>
-                        </button>
-                      </div>
-                    </div>
-                    <div class="hero17-content2">
-                      <div class="hero17-row-container1 thq-animated-group-container-horizontal thq-mask-image-horizontal">
-                        <div class="thq-animated-group-horizontal">
-                          <img
-                            alt="Fresh and Local Nigerian Grocery Items"
-                            src="img/food1.jpg"
-                            class="hero17-placeholder-image10 thq-img-scale thq-img-ratio-1-1"
-                          />
-                          <img
-                            alt="Example value for image2Alt"
-                            src="img/food2.jpg"
-                            class="hero17-placeholder-image11 thq-img-scale thq-img-ratio-1-1"
-                          />
-                          <img
-                            alt="Example value for image3Alt"
-                            src="img/food3.jpg"
-                            class="hero17-placeholder-image12 thq-img-scale thq-img-ratio-1-1"
-                          />
-                          <img
-                            alt="Example value for image4Alt"
-                            src="img/food4.jpg"
-                            class="hero17-placeholder-image13 thq-img-scale thq-img-ratio-1-1"
-                          />
-                          <img
-                            alt="Example value for image5Alt"
-                            src="img/food5.jpg"
-                            class="hero17-placeholder-image14 thq-img-scale thq-img-ratio-1-1"
-                          />
-                          <img
-                            alt="Example value for image6Alt"
-                            src="img/food6.jpg"
-                            class="hero17-placeholder-image15 thq-img-scale thq-img-ratio-1-1"
-                          />
-                        </div>
-                        <div class="thq-animated-group-horizontal">
-                          <img
-                            alt="Fresh and Local Nigerian Grocery Items"
-                            src="img/food7.jpg"
-                            class="hero17-placeholder-image16 thq-img-scale thq-img-ratio-1-1"
-                          />
-                          <img
-                            alt="Example value for image2Alt"
-                            src="img/food8.jpg"
-                            class="hero17-placeholder-image17 thq-img-scale thq-img-ratio-1-1"
-                          />
-                          <img
-                            alt="Example value for image3Alt"
-                            src="img/food9.jpg"
-                            class="hero17-placeholder-image18 thq-img-scale thq-img-ratio-1-1"
-                          />
-                          <img
-                            alt="Example value for image4Alt"
-                            src="img/food10.jpg"
-                            class="hero17-placeholder-image19 thq-img-scale thq-img-ratio-1-1"
-                          />
-                          <img
-                            alt="Example value for image5Alt"
-                            src="img/food11.jpg"
-                            class="hero17-placeholder-image20 thq-img-scale thq-img-ratio-1-1"
-                          />
-                          <img
-                            alt="Hero Image"
-                            src="img/food12.jpg"
-                            class="hero17-placeholder-image21 thq-img-scale thq-img-ratio-1-1"
-                          />
-                        </div>
-                      </div>
-                      <div
-                        class="hero17-row-container2 thq-animated-group-container-horizontal thq-mask-image-horizontal"
-                      >
-                        <div class="thq-animated-group-horizontal-reverse">
-                          <img
-                            alt="Example value for image7Alt"
-                            src="img/gift1.jpg"
-                            class="hero17-placeholder-image22 thq-img-scale thq-img-ratio-1-1"
-                          />
-                          <img
-                            alt="Example value for image8Alt"
-                            src="img/gift2.jpg"
-                            class="hero17-placeholder-image23 thq-img-scale thq-img-ratio-1-1"
-                          />
-                          <img
-                            alt="Example value for image9Alt"
-                            src="img/gift3.jpg"
-                            class="hero17-placeholder-image24 thq-img-scale thq-img-ratio-1-1"
-                          />
-                          <img
-                            alt="Example value for image10Alt"
-                            src="img/gift4.jpg"
-                            class="hero17-placeholder-image25 thq-img-scale thq-img-ratio-1-1"
-                          />
-                          <img
-                            alt="Example value for image11Alt"
-                            src="img/gift5.jpg"
-                            class="hero17-placeholder-image26 thq-img-scale thq-img-ratio-1-1"
-                          />
-                          <img
-                            alt="Example value for image12Alt"
-                            src="img/gift6.jpg"
-                            class="hero17-placeholder-image27 thq-img-scale thq-img-ratio-1-1"
-                          />
-                        </div>
-                        <div class="thq-animated-group-horizontal-reverse">
-                          <img
-                            alt="Example value for image7Alt"
-                            src="img/gift7.jpg"
-                            class="hero17-placeholder-image28 thq-img-scale thq-img-ratio-1-1"
-                          />
-                          <img
-                            alt="Example value for image8Alt"
-                            src="img/gift8.jpg"
-                            class="hero17-placeholder-image29 thq-img-scale thq-img-ratio-1-1"
-                          />
-                          <img
-                            alt="Example value for image9Alt"
-                            src="img/gift9.jpg"
-                            class="hero17-placeholder-image30 thq-img-scale thq-img-ratio-1-1"
-                          />
-                          <img
-                            alt="Example value for image10Alt"
-                            src="img/gift10.jpg"
-                            class="hero17-placeholder-image31 thq-img-scale thq-img-ratio-1-1"
-                          />
-                          <img
-                            alt="Example value for image11Alt"
-                            src="img/gift11.jpg"
-                            class="hero17-placeholder-image32 thq-img-scale thq-img-ratio-1-1"
-                          />
-                          <img
-                            alt="Hero Image"
-                            src="https://images.unsplash.com/photo-1568214379698-8aeb8c6c6ac8?ixid=M3w5MTMyMXwwfDF8c2VhcmNofDEyfHxncmFmaWN8ZW58MHx8fHwxNzE1Nzk0OTk5fDA&amp;ixlib=rb-4.0.3&amp;w=1500"
-                            class="hero17-placeholder-image33 thq-img-scale thq-img-ratio-1-1"
-                          />
-                        </div>
-                      </div>
-                    </div>
-                    <div>
-                      <div class="hero17-container2">
-                        <style>
-                          @keyframes scroll-x {
-                            from {
-                              transform: translateX(0);
-                            }
-                            to {
-                              transform: translateX(calc(-100% - 16px));
-                            }
-                          }
-
-                          @keyframes scroll-y {
-                            from {
-                              transform: translateY(0);
-                            }
-                            to {
-                              transform: translateY(calc(-100% - 16px));
-                            }
-                          }
-                        </style>
-                      </div>
-                    </div>
-                  </div>
-                </hero17-wrapper>
-              </div>
-            </div>  
-            <!--Hero section ends-->
             
             <!--About Section-->
-            <div class="col-lg-12 pricing14-max-width">
+            <div class="col-lg-12 pricing14-max-width" id="about">
                 <div class="pricing14-section-title">
                       <div class="pricing14-content">
                         <h2 class="pricing14-text101 thq-heading-2">
@@ -466,7 +475,7 @@
                 </div>
             </div>
             <div class="row">
-              <div class="col-lg-12 col-md-10 offset-md-1">
+              <div class="col-lg-12 col-md-10">
                 <features24-wrapper class="features24-wrapper">
                   <!--Features24 component-->
                   <div class="thq-section-padding">
@@ -541,7 +550,7 @@
             <!--About section ends-->
 
             <!--Services Section-->
-            <div class="col-lg-12 pricing14-max-width">
+            <div class="col-lg-12 pricing14-max-width" id="services">
                 <div class="pricing14-section-title">
                       <div class="pricing14-content">
                         <h2 class="pricing14-text101 thq-heading-2">
@@ -553,7 +562,7 @@
                 </div>
             </div>
             <div class="row">
-              <div class="col-lg-12 col-md-10 offset-md-1">
+              <div class="col-lg-12 col-md-10">
                 <cta26-wrapper class="cta26-wrapper">
               <!--CTA26 component-->
               <div class="thq-section-padding">
@@ -600,7 +609,7 @@
               </div>
             </div>
             <div class="row">
-              <div class="col-lg-12 col-md-10 offset-md-1">
+              <div class="col-lg-12 col-md-10">
                 <features25-wrapper class="features25-wrapper">
                   <!--Features25 component-->
                   <div class="thq-section-padding">
@@ -692,8 +701,8 @@
             <!--Services section ends-->
 
             <!--Pricing Section-->
-            <div class="row">
-              <div class="col-lg-12 col-md-10 offset-md-1">
+            <div class="row" id="pricing">
+              <div class="col-lg-12 col-md-10">
                 <pricing14-wrapper class="pricing14-wrapper">
                   <!--Pricing14 component-->
                   <div class="pricing14-pricing23 thq-section-padding">
@@ -1544,7 +1553,7 @@
                 </div>
             </div>
             <div class="row">
-              <div class="col-lg-12 col-md-10 offset-md-1">
+              <div class="col-lg-12 col-md-10">
                 <steps2-wrapper class="steps2-wrapper">
               <!--Steps2 component-->
               <div class="steps2-container1 thq-section-padding">
@@ -1634,7 +1643,7 @@
             <!--Process section ends-->
 
             <!--Testimonial section-->
-            <div class="col-lg-12 pricing14-max-width" style="margin-top: 100px;">
+            <div id="testimonial" class="col-lg-12 pricing14-max-width" style="margin-top: 100px;">
                 <div class="pricing14-section-title">
                       <div class="pricing14-content">
                         <h2 class="pricing14-text101 thq-heading-2">
@@ -1653,7 +1662,7 @@
                 </div>
             </div>
             <div class="row">
-              <div class="col-lg-12 col-md-10 offset-md-1">
+              <div class="col-lg-12 col-md-10">
                 <testimonial17-wrapper class="testimonial17-wrapper">
               <!--Testimonial17 component-->
               <div class="thq-section-padding">
@@ -1816,92 +1825,83 @@
             <!--Testimonial section ends-->
 
             <!--Contact section-->
-            <section id="contact" class="contact section">
+            <div class="col-lg-12 pricing14-max-width" id="contact">
+                <div class="pricing14-section-title">
+                      <div class="pricing14-content">
+                        <h2 class="pricing14-text101 thq-heading-2">
+                          <fragment class="home-fragment158">
+                            <span class="home-text158">Contact us</span>
+                          </fragment>
+                        </h2>
+                        <p class="pricing14-text102 thq-body-large">
+                          <fragment class="home-fragment180">
+                            <span class="home-text180">
+                              How can we help you?
+                            </span>
+                          </fragment>
+                        </p>
+                      </div>
+                </div>
+            </div>
+            <section class="ezy__contact9 light row">
+              <div class="container">
+                <div class="row justify-content-between">
+                  <div class="col-lg-5 mb-5 mb-lg-0">
+                    <p class="ezy__contact9-sub-heading mb-0">It’s easier to have the needed foodstuffs and items when you have the
+                      right plug. Tell us about it to find the right one for you!</p>
 
-              <!-- Section Title -->
-              <div class="col-lg-12 pricing14-max-width" style="margin-bottom:50px;">
-                  <div class="pricing14-section-title">
-                        <div class="pricing14-content">
-                          <h2 class="pricing14-text101 thq-heading-2">
-                            <fragment class="home-fragment158">
-                              <span class="home-text158">Contact us</span>
-                            </fragment>
-                          </h2>
+                    <div class="mt-5 pt-md-4">
+                      <div class="card ezy__contact9-link mt-4">
+                        <div class="card-body d-flex align-items-center">
+                          <i class="fas fa-envelope-open-text ezy__contact9-icon fs-3 px-2"></i>
+                          <a class="ezy__contact9-link-content ms-4"
+                            href="mailto:kehindebolatito@gmail.com">kehindebolatito@gmail.com</a>
                         </div>
+                      </div>
+                      <div class="card ezy__contact9-link mt-4">
+                        <div class="card-body d-flex align-items-center">
+                          <i class="fas fa-phone-alt ezy__contact9-icon fs-3 px-2"></i>
+                          <a class="ezy__contact9-link-content ms-4" href="callto:+2349061965441">+2349061965441</a>
+                        </div>
+                      </div>
+                      <div class="card ezy__contact9-link mt-4">
+                        <div class="card-body d-flex align-items-center">
+                          <i class="fas fa-location-dot fs-3 ezy__contact9-icon px-2"></i>
+                          <a class="ezy__contact9-link-content ms-4" href="#">easyfrontend.com</a>
+                        </div>
+                      </div>
+                    </div>
                   </div>
-              </div><!-- End Section Title -->
+                  <div class="col-lg-5">
+                    <div class="card ezy__contact9-form-card">
+                      <div class="card-body p-md-5">
 
-              <div class="contact-wrapper">
-  
-  <!-- Left contact page --> 
-    
-    <form id="contact-form" class="form-horizontal" role="form">
-       
-      <div class="form-group">
-        <div class="col-sm-12">
-          <input type="text" class="form-control" id="name" placeholder="NAME" name="name" value="" required>
-        </div>
-      </div>
-
-      <div class="form-group">
-        <div class="col-sm-12">
-          <input type="email" class="form-control" id="email" placeholder="EMAIL" name="email" value="" required>
-        </div>
-      </div>
-
-      <textarea class="form-control" rows="10" placeholder="MESSAGE" name="message" required></textarea>
-      
-      <button class="btn btn-primary send-button" id="submit" type="submit" value="SEND">
-        <div class="alt-send-button">
-          <i class="fa fa-paper-plane"></i><span class="send-text">SEND</span>
-        </div>
-      
-      </button>
-      
-    </form>
-    
-  <!-- Left contact page --> 
-    
-      <div class="direct-contact-container">
-
-        <ul class="contact-list">
-          <li class="list-item"><i class="fa fa-map-marker fa-2x"><span class="contact-text place">City, State</span></i></li>
-          
-          <li class="list-item"><i class="fa fa-phone fa-2x"><span class="contact-text phone"><a href="tel:1-212-555-5555" title="Give me a call">(212) 555-2368</a></span></i></li>
-          
-          <li class="list-item"><i class="fa fa-envelope fa-2x"><span class="contact-text gmail"><a href="mailto:#" title="Send me an email">hitmeup@gmail.com</a></span></i></li>
-          
-        </ul>
-
-        <hr>
-        <ul class="social-media-list">
-          <li><a href="#" target="_blank" class="contact-icon">
-            <i class="fa fa-github" aria-hidden="true"></i></a>
-          </li>
-          <li><a href="#" target="_blank" class="contact-icon">
-            <i class="fa fa-codepen" aria-hidden="true"></i></a>
-          </li>
-          <li><a href="#" target="_blank" class="contact-icon">
-            <i class="fa fa-twitter" aria-hidden="true"></i></a>
-          </li>
-          <li><a href="#" target="_blank" class="contact-icon">
-            <i class="fa fa-instagram" aria-hidden="true"></i></a>
-          </li>       
-        </ul>
-        <hr>
-
-        <div class="copyright">&copy; ALL OF THE RIGHTS RESERVED</div>
-
-      </div>
-    
-  </div>
-
-            </section>
+                        <form id="contact-form" netlify>
+                          <div class="form-group mb-3 mt-2">
+                            <input type="text" name="name" class="form-control" placeholder="Enter Name" />
+                          </div>
+                          <div class="form-group mb-3 mt-2">
+                            <input type="email" name="email" class="form-control" placeholder="Enter Email" />
+                          </div>
+                          <div class="form-group mb-3">
+                            <textarea name="message" class="form-control" placeholder="Enter Message"
+                              rows="3"></textarea>
+                          </div>
+                          <div class="text-end">
+                            <button type="submit" class="btn btn-primary ezy__contact9-btn">Submit</button>
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+	          </section>
             <!--Contact section-->
 
             <!--Footer-->
             <div class="row">
-              <div class="col-lg-12 col-md-10 offset-md-1">
+              <div class="col-lg-12 col-md-10">
                 <footer4-wrapper class="footer4-wrapper">
               <!--Footer4 component-->
               <footer class="footer4-footer7 thq-section-padding">
@@ -1916,7 +1916,7 @@
                     </div>
                     <div class="footer4-links">
                       <a
-                        href="https://example.com"
+                        href="#about"
                         target="_blank"
                         rel="noreferrer noopener"
                         class="thq-body-small"
@@ -1926,7 +1926,7 @@
                         </fragment>
                       </a>
                       <a
-                        href="https://example.com"
+                        href="#contact"
                         target="_blank"
                         rel="noreferrer noopener"
                         class="thq-body-small"
@@ -1936,7 +1936,7 @@
                         </fragment>
                       </a>
                       <a
-                        href="https://example.com"
+                        href="#"
                         target="_blank"
                         rel="noreferrer noopener"
                         class="thq-body-small"
@@ -1946,7 +1946,7 @@
                         </fragment>
                       </a>
                       <a
-                        href="https://example.com"
+                        href="#"
                         target="_blank"
                         rel="noreferrer noopener"
                         class="thq-body-small"
@@ -1956,7 +1956,7 @@
                         </fragment>
                       </a>
                       <a
-                        href="https://example.com"
+                        href="#"
                         target="_blank"
                         rel="noreferrer noopener"
                         class="thq-body-small"
@@ -1971,7 +1971,7 @@
                     <div class="thq-divider-horizontal"></div>
                     <div class="footer4-row">
                       <div class="footer4-container">
-                        <span class="thq-body-small">© 2024 TeleportHQ</span>
+                        <span class="thq-body-small">© <script>document.write(new Date().getFullYear())</script> Coral Shopping</span>
                       </div>
                       <div class="footer4-footer-links">
                         <span class="footer4-text11 thq-body-small">
@@ -2005,7 +2005,17 @@
     </div>
     <script defer="" src="https://unpkg.com/@teleporthq/teleport-custom-scripts"></script>
     <!-- Main JS File -->
-    <script src="assets/js/main.js"></script>
+    <script src="/dist/js/main.js"></script>
+    <script src="/dist/js/popper.min.js"></script>
+    <script src="/dist/js/bootstrap.min.js"></script>
+    <script src="/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Required scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/js/all.min.js" integrity="sha512-rpLlll167T5LJHwp0waJCh3ZRf7pO6IT1+LZOhAyP6phAirwchClbTZV3iqL3BMrVxIYRbzGTpli4rfxsCK6Vw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	
 
   </body>
 </html>
